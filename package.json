@@ -1,0 +1,25 @@
+{
+  "name": "uae-deal-radar",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "scan": "node scripts/scan.mjs",
+    "test": "node scripts/test-logic.mjs",
+    "simulate": "tsc lib/store.ts lib/verdict.ts lib/calls.ts lib/supabase.ts --outDir .sim-build/lib --module esnext --target es2022 --moduleResolution bundler --skipLibCheck --esModuleInterop && node scripts/fix-esm-imports.mjs && node scripts/simulate.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.111.0",
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5"
+  }
+}
